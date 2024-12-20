@@ -1,0 +1,557 @@
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+/* Body CSS */
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600;
+  line-height: 1.6;
+  background-color: #000414;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Header and Navigation */
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10; /* Ensure it sits above the hero content */
+}
+
+/* Navigation Container */
+.nav-container {
+  display: flex;
+  justify-content: space-between; /* Space out the logo and links */
+  align-items: center; /* Center items vertically */
+  padding: 3rem;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.logo img {
+  max-width: 200px;
+}
+
+.logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex; /* Enable flexbox on the list */
+  list-style: none; /* Remove default list styling */
+  gap: 2rem; /* Space between navigation items */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+}
+
+.nav-links a {
+  color: #fff; /* White text for visibility */
+  text-decoration: none; /* Remove underline */
+  font-size: 22px;
+  transition: color 0.3s ease; /* Smooth color change on hover */
+}
+
+.nav-links a:hover {
+  color: #bd9700; /* Highlight color on hover */
+}
+
+/* Contact Button */
+.contact-button {
+  padding: 0.75rem 1.5rem;
+  text-shadow: 2px 3px 5px rgba(0,0,0,0.5);
+  background-color: #ffcc00; /* Different background color for button */
+  color: #000414 !important; 
+  border-radius: 35px;
+  transition: background-color 0.3s ease, color 0.3s ease !important; /* Apply transition to background-color and color */
+  margin: 0.5rem; /* Add margin for spacing between buttons */
+}
+
+.contact-button:hover {
+  background-color: #ddb100 !important; /* Change background color on hover */
+  color: white !important;
+}
+
+/* Mobile Menu Toggle */
+.menu-toggle {
+  display: none; /* Hidden by default */
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  height: 2px;
+  width: 25px;
+  background: #fff;
+  margin: 4px 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 1246px) {
+  .nav-container {
+    padding: 3rem 7%;
+  }
+  
+  .nav-links {
+    flex-direction: column; /* Stack items vertically */
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8); /* Dark background for visibility */
+    width: 200px;
+    text-align: right;
+    display: none; /* Hidden by default */
+  }
+
+  .nav-links.open {
+    display: flex; /* Show when menu is toggled */
+  }
+
+  .menu-toggle {
+    display: flex; /* Show menu toggle button */
+  }
+}
+
+/* Hero Section */
+.hero {
+  width: 100%; /* Full width */
+  height: 108vh; /* Full viewport height */
+  padding-top: 10rem;
+  background: url('../../components/Background.png') no-repeat center center;
+  background-size: cover; /* Ensures image covers the whole area without stretching */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  top: 0; /* Ensure it touches the top */
+  left: 0;
+}
+
+.hero-content {
+  max-width: 600px;
+  padding: 2rem;
+  text-align: center;
+  margin: 0 auto;
+}
+
+h1 strong {
+  font-weight: 800; /* Thicker weight for the words inside the strong tag */
+}
+
+.hero h1 {
+  font-size: 7.5rem;
+  margin-bottom: 5rem;
+  font-weight: 500;
+  color: #DEEBFF;
+  line-height: 9rem;
+}
+
+.hero p {
+  font-size: 1.6rem;
+  margin-bottom: 10rem;
+  line-height: 2rem;
+  font-weight: 300;
+  color: #DEEBFF;
+}
+
+/* CTA Button */
+.cta-button {
+  margin-top: 2rem; 
+  padding: 1rem 1.8rem;
+  background: #5d5ca136;
+  color: #fff;
+  border-radius: 50px;
+  transition: background 0.3s ease;
+  font-size: 1.5rem;
+  font-weight: 1000;
+  word-spacing:0.5rem;
+  flex: 1; /* Allow buttons to take equal space */
+  text-align: center; /* Center the text inside buttons */
+  margin: 0.5rem; /* Add margin for spacing between buttons */
+  text-shadow: 2px 3px 5px rgba(0,0,0,0.5);
+}
+
+.cta-button:hover {
+  background: #FFCC00;
+}
+
+/* Button Group */
+.button-group {
+  display: flex;
+  justify-content: center; /* Center the buttons horizontally */
+  gap: 1rem; /* Space between the buttons */
+  margin-top: 2rem; /* Add space above the button group */
+  width: 100%; /* Ensure the button group takes the full width */
+}
+
+/* Container Styling */
+.container {
+  width: 100%;
+  max-width: 1600px; 
+  margin: 0 auto; /* Center the container */
+  padding: 0 1rem; /* Side padding for spacing */
+}
+
+:root {
+  --container-padding: 1rem;
+  --section-margin: 2rem;
+}
+
+.container {
+  padding: 0 var(--container-padding);
+}
+
+/* Information Section */
+.information-section {
+  position: relative;
+  width: 100%;
+  padding: 10rem 0;
+  background: url('../../components/Background-textured.jpg') no-repeat center center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.information-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #DEEBFF 0%, #DEEBFF 30%, #deebffc8 100%);
+  pointer-events: none; /* Ensures the gradient doesn't interfere with any other elements */
+}
+
+.section-content {
+  position: relative;
+  display: flex;
+  justify-content: flex-start; /* Align content to the left */
+  max-width: 1600px;
+  width: 100%;
+  z-index: 1; /* Ensure content appears above the gradient */
+  padding: 0 2rem; /* Add padding to the sides if needed */
+}
+
+.image-wrapper {
+  flex: 0 0 37.5%; /* Set image wrapper to take up 40% of the container width */
+  display: flex;
+  justify-content: flex-start; /* Align image to the left */
+  align-items: center;
+}
+
+.square-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 5rem;
+  border: 0.80rem solid #ffcc00;
+  box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.308);
+}
+
+.text-wrapper {
+  flex: 0 0 62.5%; /* Set text wrapper to take up 60% of the container width */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 4rem; /* Add padding to the left side of the text */
+}
+
+.text-wrapper h2, .text-wrapper p {
+  color: #000f42; 
+  margin-bottom: 1rem;
+  text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+.text-wrapper p {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  font-weight: 500;
+}
+
+.text-wrapper h2 {
+  font-size: 5.5rem;
+  font-weight: 500;
+  line-height: 7rem;
+}
+
+/* Partnership Section */
+.partnership-section {
+  position: relative;
+  width: 100%;
+  padding: 5rem 0; 
+  background-color: #000414; /* Solid dark blue background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.partnership-content {
+  position: relative;
+  max-width: 1600px;
+  width: 100%;
+  text-align: left;
+  color: #fff;
+  z-index: 2; /* Ensure content appears above the overlay */
+}
+
+.partnership-content h2 {
+  margin-bottom: 2rem;
+  font-size: 5.5rem;
+  font-weight: 500;
+  line-height: 7rem;
+  color: #deebff; 
+  text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+.partnership-content p {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  font-weight: 300;
+  margin-bottom: 10rem;
+  color: #deebff; 
+}
+
+.slider-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  width: calc(365px * 10 + 1.5rem * 9); /* Adjust to fit all slides plus margins */
+  animation: scroll 20s linear infinite;
+}
+
+.slider:hover {
+  animation-play-state: paused; /* Pause the animation on hover */
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-365px * 5 - 1.5rem * 5)); /* Adjust based on the number of slides */
+  }
+}
+
+a.slide {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  min-width: 365px; /* Set a fixed width */
+  height: 180px; /* Set a fixed height */
+  margin-right: 1.5rem; /* Add some spacing between slides */
+  transition: filter 0.3s ease;
+  filter: grayscale(100%);
+  background: url('../../components/Background-textured.jpg') no-repeat center center; /* Pattern background */
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+a.slide::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(249, 249, 249, 0.8); /* 80% overlay color */
+  pointer-events: none; /* Ensures the overlay doesn't interfere with any other elements */
+}
+
+a.slide img {
+  max-width: 60%;
+  max-height: 100%;
+  height: auto;
+  display: block;
+  z-index: 1; /* Ensure the image is above the overlay */
+}
+
+a.slide:hover {
+  filter: grayscale(0%);
+}
+
+/* Contact Section */
+.contact-section {
+  position: relative;
+  width: 100%;
+  padding: 10rem 0; 
+  background-color: #000414; /* Dark blue background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-content {
+  position: relative;
+  max-width: 1600px;
+  width: 100%;
+  padding: 10rem 5rem;
+  background: url('../../components/Background-textured.jpg') no-repeat center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  border-radius: 20px; /* Rounded border radius */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for better visual separation */
+  z-index: 1; /* Ensure content appears above the gradient overlay */
+  overflow: hidden; /* Ensure pseudo-element is contained within the div */
+}
+
+.contact-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #DEEBFF 0%, #DEEBFF 30%, #deebffc8 100%);
+  pointer-events: none; /* Ensures the gradient doesn't interfere with any other elements */
+  border-radius: 20px; /* Match the section's border radius */
+  z-index: 0; /* Ensure the gradient is behind the content */
+}
+
+.contact-content h2, .contact-content p {
+  position: relative; /* Ensure these elements are above the pseudo-element */
+  color: #000f42; 
+  text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.contact-button {
+  position: relative;
+  font-size: 22px; 
+}
+
+.contact-content h2 {
+  margin-bottom: 2rem;
+  font-size: 5.5rem;
+  font-weight: 500;
+  line-height: 7rem;
+  color: #000f42; 
+}
+
+.contact-content p {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+  color: #000414; 
+}
+
+/* Footer Section */
+.footer {
+  background-color: #000414;
+  color: #deebff;
+  padding: 3rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-container {
+  max-width: 1600px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-logo {
+  max-width: 200px;
+  margin-bottom: 5rem;
+}
+
+.footer-description {
+  max-width: 1600px;
+  margin-bottom: 2rem;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  font-weight: 300;
+  margin-bottom: 5rem;
+  color: #deebff; 
+}
+
+.footer-contact {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.footer-contact a {
+  color: #deebff;
+  text-decoration: none;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.contact-icon {
+  margin-right: 0.5rem;
+  width: 40px; 
+}
+
+.footer-nav {
+  display: flex;
+  gap: 3rem;
+  margin: 2rem 0;
+}
+
+.footer-nav a {
+  color: #024abc;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.footer-nav a:hover {
+  color: #ffcc00;
+}
+
+.footer-legal {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.footer-legal a {
+  color: #deebff;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.footer-legal a:hover {
+  color: #ffcc00;
+}
+
+.footer-copyright {
+  font-size: 1rem;
+  color: #deebff;
+}
